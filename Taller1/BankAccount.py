@@ -1,8 +1,8 @@
 from enum import Enum
 
-saldo = [0]
+saldo = [0]   # Initialize the balance variable as a list with one element
 
-class menu(Enum):
+class menu(Enum):  # Define a menu using an Enum class
     
     depositing = 1
     withdrawing = 2
@@ -11,7 +11,7 @@ class menu(Enum):
     
 while True:    
 
-    def prompt():
+    def prompt():   # Prompt the user for an option
 
         opt = int(input("""write: 
                         1 - To deposit
@@ -21,7 +21,7 @@ while True:
                         your number: """))
         return opt
 
-    def info_recieve(opt):
+    def info_recieve(opt):    # Process the user's choice and update the balance
         global saldo
         if opt == menu.depositing.value:
                 amount = float(input('insert amount: '))
